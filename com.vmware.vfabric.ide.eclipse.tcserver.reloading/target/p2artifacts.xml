@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='com.vmware.vfabric.ide.eclipse.tcserver.reloading' version='5.0.0.202306202019-SNAPSHOT'>
+    <properties size='6'>
+      <property name='artifact.size' value='430440'/>
+      <property name='download.size' value='430440'/>
+      <property name='maven-groupId' value='com.vmware.vfabric.ide.eclipse.tcserver'/>
+      <property name='maven-artifactId' value='com.vmware.vfabric.ide.eclipse.tcserver.reloading'/>
+      <property name='maven-version' value='5.0.0-SNAPSHOT'/>
+      <property name='maven-type' value='eclipse-plugin'/>
+    </properties>
+  </artifact>
+</artifacts>

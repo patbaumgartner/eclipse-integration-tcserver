@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SpringSource Tool Suite tc Server Integration Tests
+Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.tests;singl
+ eton:=true
+Bundle-Version: 5.0.0.202306202019-SNAPSHOT
+Bundle-Vendor: Pivotal Software, Inc.
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources,org.
+ eclipse.debug.core,org.eclipse.jdt.launching,org.eclipse.jst.server.cor
+ e,org.eclipse.jst.server.tomcat.core,org.eclipse.wst.server.core,com.vm
+ ware.vfabric.ide.eclipse.tcserver.configurator,com.vmware.vfabric.ide.e
+ clipse.tcserver.core,com.vmware.vfabric.ide.eclipse.tcserver.ui,org.ecl
+ ipse.ui,org.junit;bundle-version="4.8.0",org.apache.commons.lang,org.ec
+ lipse.jdt.core,org.eclipse.jst.jee.web,org.eclipse.jst.ejb.ui,org.eclip
+ se.ui.ide,org.eclipse.equinox.p2.metadata,org.eclipse.equinox.p2.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.vmware.vfabric.ide.eclipse.tcserver.internal.core;x-
+ internal:=true,com.vmware.vfabric.ide.eclipse.tcserver.tests;x-internal
+ :=true,com.vmware.vfabric.ide.eclipse.tcserver.tests.support
+Bundle-License: Eclipse Public License v1.0;link="https://www.eclipse.or
+ g/legal/epl-v10.html"
+

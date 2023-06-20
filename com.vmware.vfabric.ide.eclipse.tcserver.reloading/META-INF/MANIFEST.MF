@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SpringSource Tool Suite tc Server Agent Reloading
 Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.reloading;singleton:=true
-Bundle-Version: 4.1.2.qualifier
+Bundle-Version: 5.0.0.qualifier
 Bundle-Vendor: Pivotal Software, Inc.
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Activator: com.vmware.vfabric.ide.eclipse.tcserver.reloading.TcServerReloadingPlugin
 Export-Package: com.vmware.vfabric.ide.eclipse.tcserver.reloading
 Bundle-ActivationPolicy: lazy

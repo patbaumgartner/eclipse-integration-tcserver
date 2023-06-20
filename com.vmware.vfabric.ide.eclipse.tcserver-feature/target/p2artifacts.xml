@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='org.eclipse.update.feature' id='com.vmware.vfabric.ide.eclipse.tcserver' version='5.0.0.202306202019-SNAPSHOT'>
+    <properties size='7'>
+      <property name='artifact.size' value='9659'/>
+      <property name='download.size' value='9659'/>
+      <property name='maven-groupId' value='com.vmware.vfabric.ide.eclipse.tcserver'/>
+      <property name='maven-artifactId' value='com.vmware.vfabric.ide.eclipse.tcserver'/>
+      <property name='maven-version' value='5.0.0-SNAPSHOT'/>
+      <property name='maven-type' value='eclipse-feature'/>
+      <property name='download.contentType' value='application/zip'/>
+    </properties>
+  </artifact>
+</artifacts>

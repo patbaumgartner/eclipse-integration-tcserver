@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='com.vmware.vfabric.ide.eclipse.tcserver.reloading' version='5.0.0.202306202019-SNAPSHOT' generation='2'>
+    <update id='com.vmware.vfabric.ide.eclipse.tcserver.reloading' range='[0.0.0,5.0.0.202306202019-SNAPSHOT)' severity='0'/>
+    <properties size='6'>
+      <property name='org.eclipse.equinox.p2.name' value='SpringSource Tool Suite tc Server Agent Reloading'/>
+      <property name='org.eclipse.equinox.p2.provider' value='Pivotal Software, Inc.'/>
+      <property name='maven-groupId' value='com.vmware.vfabric.ide.eclipse.tcserver'/>
+      <property name='maven-artifactId' value='com.vmware.vfabric.ide.eclipse.tcserver.reloading'/>
+      <property name='maven-version' value='5.0.0-SNAPSHOT'/>
+      <property name='maven-type' value='eclipse-plugin'/>
+    </properties>
+    <provides size='5'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.reloading' version='5.0.0.202306202019-SNAPSHOT'/>
+      <provided namespace='osgi.bundle' name='com.vmware.vfabric.ide.eclipse.tcserver.reloading' version='5.0.0.202306202019-SNAPSHOT'/>
+      <provided namespace='java.package' name='com.vmware.vfabric.ide.eclipse.tcserver.reloading' version='0.0.0'/>
+      <provided namespace='osgi.identity' name='com.vmware.vfabric.ide.eclipse.tcserver.reloading' version='5.0.0.202306202019-SNAPSHOT'>
+        <properties size='1'>
+          <property name='type' value='osgi.bundle'/>
+        </properties>
+      </provided>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='3'>
+      <required namespace='java.package' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+        <description>
+          com.vmware.vfabric.ide.eclipse.tcserver.reloading
+        </description>
+      </requiredProperties>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='com.vmware.vfabric.ide.eclipse.tcserver.reloading' version='5.0.0.202306202019-SNAPSHOT'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.reloading;singleton:=true&#xA;Bundle-Version: 5.0.0.202306202019-SNAPSHOT&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

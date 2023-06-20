@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SpringSource Tool Suite Workspace Configuration
+Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.configurato
+ r;singleton:=true
+Bundle-Version: 5.0.0.202306202019-SNAPSHOT
+Bundle-Activator: com.vmware.vfabric.ide.eclipse.tcserver.internal.confi
+ gurator.Activator
+Bundle-Vendor: Pivotal Software, Inc.
+Require-Bundle: org.eclipse.ui,org.eclipse.debug.core,org.eclipse.wst.se
+ rver.core,org.eclipse.wst.server.ui,org.eclipse.jst.server.tomcat.core,
+ org.eclipse.wst.server.ui,org.eclipse.equinox.p2.engine,org.eclipse.jdt
+ .core,org.eclipse.jdt.ui,org.eclipse.ui.browser,org.eclipse.equinox.p2.
+ repository,org.eclipse.equinox.p2.core,org.eclipse.equinox.p2.touchpoin
+ t.natives,org.eclipse.mylyn.discovery.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy
+Export-Package: com.vmware.vfabric.ide.eclipse.tcserver.configurator,com
+ .vmware.vfabric.ide.eclipse.tcserver.configurator.util; x-friends:="com
+ .vmware.vfabric.ide.eclipse.tcserver.insight.ui,  com.vmware.vfabric.id
+ e.eclipse.tcserver.ui,  com.vmware.vfabric.ide.eclipse.tcserver.tests, 
+  com.vmware.vfabric.ide.eclipse.tcserver.core",com.vmware.vfabric.ide.e
+ clipse.tcserver.internal.configurator;x-internal:=true,com.vmware.vfabr
+ ic.ide.eclipse.tcserver.internal.configurator.operations;x-internal:=tr
+ ue,com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.server
+ ;x-internal:=true,com.vmware.vfabric.ide.eclipse.tcserver.internal.conf
+ igurator.ui;x-internal:=true
+Bundle-ClassPath: lib/,.
+Import-Package: org.eclipse.core.runtime,org.eclipse.core.runtime.jobs,o
+ rg.eclipse.core.runtime.preferences,org.eclipse.osgi.service.datalocati
+ on,org.eclipse.osgi.service.resolver,org.eclipse.osgi.util,org.osgi.fra
+ mework,org.osgi.service.prefs
+Bundle-License: Eclipse Public License v1.0;link="https://www.eclipse.or
+ g/legal/epl-v10.html"
+

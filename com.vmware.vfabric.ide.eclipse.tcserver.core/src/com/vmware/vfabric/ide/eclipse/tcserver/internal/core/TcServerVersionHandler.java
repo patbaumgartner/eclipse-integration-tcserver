@@ -37,7 +37,7 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 	private static String VERIFY_SPEC_2_0 = "tijars";
 
 	private static String VERIFY_SPEC_2_5 = "tcruntime-ctl.sh,lib,templates";
-	
+
 	private static String VERIFY_SPEC_4_0 = "lib,templates,tcserver,tcserver.bat";
 
 	private static String ID_TOMCAT_RUNTIME_60 = "org.eclipse.jst.server.tomcat.runtime.60";
@@ -47,7 +47,9 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 	private static String ID_TOMCAT_RUNTIME_80 = "org.eclipse.jst.server.tomcat.runtime.80";
 
 	private static String ID_TOMCAT_RUNTIME_90 = "org.eclipse.jst.server.tomcat.runtime.90";
-	
+
+	private static String ID_TOMCAT_RUNTIME_101 = "org.eclipse.jst.server.tomcat.runtime.101";
+
 	private final String runtimeId;
 
 	public TcServerVersionHandler(String runtimeId) {
@@ -141,9 +143,9 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 				mapToTomcatServerId(tomcatLocation, serverTypeId));
 
 		IStatus status = Status.OK_STATUS;
-		
+
 		String tomcatServerId = mapToTomcatRuntimeId(tomcatLocation, runtimeTypeId);
-		
+
 		if (isJarLoaderPresent(tomcatServerId)) {
 			if (server.isServeModulesWithoutPublish()) {
 				status = TomcatVersionHelper.copyLoaderJar(getRuntimeBaseDirectory(server).append("lib"),
@@ -160,12 +162,13 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 		}
 		return status;
 	}
-	
+
 	private static boolean isJarLoaderPresent(String tomcatRuntimeId) {
 		int idx = tomcatRuntimeId.lastIndexOf('.');
 		if (idx >= 0 && idx < tomcatRuntimeId.length() - 1) {
 			String version = tomcatRuntimeId.substring(idx + 1);
-			return version.startsWith("50" ) || version.startsWith("55") || version.startsWith("60") || version.startsWith("70"); 
+			return version.startsWith("50") || version.startsWith("55") || version.startsWith("60")
+					|| version.startsWith("70");
 		}
 		return false;
 	}
@@ -181,8 +184,11 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 		else if (tomcatLocation.lastSegment().startsWith("tomcat-8")) {
 			return TomcatPlugin.TOMCAT_80;
 		}
-		else {
+		else if (tomcatLocation.lastSegment().startsWith("tomcat-9")) {
 			return TomcatPlugin.TOMCAT_90;
+		}
+		else {
+			return TomcatPlugin.TOMCAT_101;
 		}
 	}
 
@@ -197,8 +203,11 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 		else if (tomcatLocation.lastSegment().startsWith("tomcat-8")) {
 			return ID_TOMCAT_RUNTIME_80;
 		}
-		else {
+		else if (tomcatLocation.lastSegment().startsWith("tomcat-9")) {
 			return ID_TOMCAT_RUNTIME_90;
+		}
+		else {
+			return ID_TOMCAT_RUNTIME_101;
 		}
 	}
 
@@ -207,7 +216,7 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 		if (isVersion_2_5() || isVersion_3_0()) {
 			return checkResource(VERIFY_SPEC_2_5, installPath);
 		}
-		else if (isVersion_4_0()) {
+		else if (isVersion_4_0() || isVersion_5_0()) {
 			return checkResource(VERIFY_SPEC_4_0, TcServerRuntime40.getTcServerRuntimePath(installPath));
 		}
 		else {
@@ -238,7 +247,8 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 			}
 			return Status.OK_STATUS;
 		}
-		return new Status(IStatus.ERROR, TomcatPlugin.PLUGIN_ID, 0, NLS.bind(Messages.errorInstallDirDoesNotExist, installPath.toFile()), null);
+		return new Status(IStatus.ERROR, TomcatPlugin.PLUGIN_ID, 0,
+				NLS.bind(Messages.errorInstallDirDoesNotExist, installPath.toFile()), null);
 	}
 
 	public boolean isVersion_2_5() {
@@ -248,13 +258,17 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 	public boolean isVersion_3_0() {
 		return runtimeId.endsWith("80");
 	}
-	
+
 	public boolean isVersion_4_0() {
 		return runtimeId.endsWith("90");
 	}
 
+	public boolean isVersion_5_0() {
+		return runtimeId.endsWith("101");
+	}
+
 	public boolean supportsServlet30() {
-		return isVersion_2_5() || isVersion_3_0() || isVersion_4_0();
+		return isVersion_2_5() || isVersion_3_0() || isVersion_4_0() || isVersion_5_0();
 	}
 
 	@Override
@@ -277,6 +291,14 @@ public class TcServerVersionHandler extends Tomcat60Handler {
 			String version = module.getModuleType().getVersion();
 			if ("2.2".equals(version) || "2.3".equals(version) || "2.4".equals(version) || "2.5".equals(version)
 					|| "3.0".equals(version) || "3.1".equals(version) || "4.0".equals(version)) {
+				return Status.OK_STATUS;
+			}
+		}
+		else if (isVersion_5_0()) {
+			String version = module.getModuleType().getVersion();
+			if ("2.2".equals(version) || "2.3".equals(version) || "2.4".equals(version) || "2.5".equals(version)
+					|| "3.0".equals(version) || "3.1".equals(version) || "4.0".equals(version) || "5.0".equals(version)
+					|| "6.0".equals(version)) {
 				return Status.OK_STATUS;
 			}
 		}

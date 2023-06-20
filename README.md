@@ -1,6 +1,6 @@
-# Pivotal tc Server Integration for Eclipse
-      
-  The Pivotal tc Server Integration for Eclipse adds server adaptors for the Pivotal
+# Pivotal/VMware tc Server Integration for Eclipse
+
+  The Pivotal/VMware tc Server Integration for Eclipse adds server adaptors for the Pivotal
   tc Server to the Eclipse JEE tooling. It makes it easy to deploy apps, start, debug
   and stop your tc Server, create new instances with various configurations, all from within Eclipse.
 
@@ -44,15 +44,15 @@
   
   https://github.com/spring-projects/eclipse-integration-tcserver/issues
 
-## Developing Pivotal tc Server Integration for Eclipse
+## Developing Pivotal/VMware tc Server Integration for Eclipse
 
   Just clone the repo and import the projects into an Eclipse workspace. The easiest way to ensure
   that your target platform contains all the necessary dependencies, install a CI build into
   your target platform and proceed.
 
-## Building Pivotal tc Server Integration for Eclipse
+## Building Pivotal/VMware tc Server Integration for Eclipse
   
-  The Pivotal tc Server Integration for Eclipse project uses Maven Tycho to do continuous integration
+  The Pivotal/VMware tc Server Integration for Eclipse project uses Maven Tycho to do continuous integration
   builds and to produce p2 repos and update sites. To build the project yourself, you can execute:
 
-  `mvn -Pe47 -Dmaven.test.skip=true clean install`
+  `mvn -Pe427 -Dmaven.test.skip=true clean install`

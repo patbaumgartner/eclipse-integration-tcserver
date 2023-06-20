@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="https://maven.apache.org/POM/4.0.0"
-	 xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.vmware.vfabric.ide.eclipse.tcserver</groupId>
-    <artifactId>com.vmware.vfabric.ide.eclipse.tcserver.parent</artifactId>
-    <version>4.1.2-SNAPSHOT</version>
-  </parent>
-  <artifactId>com.vmware.vfabric.ide.eclipse.tcserver.tests</artifactId>
-  <packaging>eclipse-test-plugin</packaging>
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.vmware.vfabric.ide.eclipse.tcserver</groupId>
+		<artifactId>com.vmware.vfabric.ide.eclipse.tcserver.parent</artifactId>
+		<version>5.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.vmware.vfabric.ide.eclipse.tcserver.tests</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
 
 	<properties>
-	 	<test.useUIHarness>false</test.useUIHarness>
+		<test.useUIHarness>false</test.useUIHarness>
 		<test.suite>com.vmware.vfabric.ide.eclipse.tcserver.tests</test.suite>
 		<test.class>com.vmware.vfabric.ide.eclipse.tcserver.tests.AllTcServerTests</test.class>
 	</properties>

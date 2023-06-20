@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SpringSource Tool Suite tc Server Agent Reloading
+Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.reloading;s
+ ingleton:=true
+Bundle-Version: 5.0.0.202306202019-SNAPSHOT
+Bundle-Vendor: Pivotal Software, Inc.
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Activator: com.vmware.vfabric.ide.eclipse.tcserver.reloading.TcSe
+ rverReloadingPlugin
+Export-Package: com.vmware.vfabric.ide.eclipse.tcserver.reloading
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.core.runtime,org.osgi.framework
+Bundle-License: Eclipse Public License v1.0;link="https://www.eclipse.or
+ g/legal/epl-v10.html"
+

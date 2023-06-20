@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="https://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.vmware.vfabric.ide.eclipse.tcserver</groupId>
-    <artifactId>com.vmware.vfabric.ide.eclipse.tcserver.parent</artifactId>
-    <version>4.1.2-SNAPSHOT</version>
-  </parent>
-  <artifactId>com.vmware.vfabric.ide.eclipse.tcserver.site</artifactId>
-  <packaging>eclipse-repository</packaging>
-  <name>VMware vFabric tc Server Integration for Eclipse</name>
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.vmware.vfabric.ide.eclipse.tcserver</groupId>
+		<artifactId>com.vmware.vfabric.ide.eclipse.tcserver.parent</artifactId>
+		<version>5.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.vmware.vfabric.ide.eclipse.tcserver.site</artifactId>
+	<packaging>eclipse-repository</packaging>
+	<name>VMware vFabric tc Server Integration for Eclipse</name>
 
-  <properties>
-	<dist.accessKey>${accessKey}</dist.accessKey>
-	<dist.secretKey>${secretKey}</dist.secretKey>
-  </properties>  
+	<properties>
+		<dist.accessKey>${accessKey}</dist.accessKey>
+		<dist.secretKey>${secretKey}</dist.secretKey>
+	</properties>
 
 	<build>
 		<plugins>
-		  <plugin>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>properties-maven-plugin</artifactId>
-			<version>1.0-alpha-2</version>
-			<executions>
-			  <execution>
-				<phase>initialize</phase>
-				<goals>
-				  <goal>read-project-properties</goal>
-				</goals>
-				<configuration>
-				  <quiet>true</quiet>
-				  <files>
-					<file>${dist.properties}</file>
-				  </files>
-				</configuration>
-			  </execution>
-			</executions>
-		  </plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.1.0</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<quiet>true</quiet>
+							<files>
+								<file>${dist.properties}</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.6</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>upload-dist</id>
@@ -54,10 +54,13 @@
 								<taskdef resource="org/springframework/build/aws/ant/antlib.xml" />
 
 								<property name="site.target.dir" value="${project.build.directory}" />
-								<property name="dist.full.version" value="${unqualifiedVersion}.${buildQualifier}" />
+								<property name="dist.full.version"
+									value="${unqualifiedVersion}.${buildQualifier}" />
 
-								<property name="dist.file.name" value="${dist.project}-${dist.full.version}-updatesite.zip" />
-								<property name="dist.full.path" value="${site.target.dir}/repository/${dist.file.name}" />
+								<property name="dist.file.name"
+									value="${dist.project}-${dist.full.version}-updatesite.zip" />
+								<property name="dist.full.path"
+									value="${site.target.dir}/repository/${dist.file.name}" />
 
 								<delete file="${dist.full.path}" />
 								<zip zipfile="${dist.full.path}" filesonly="true">
@@ -81,7 +84,8 @@
 										</fileset>
 									</delete>
 
-									<upload bucketName="${dist.bucket}" toDir="${dist.path}" publicRead="true">
+									<upload bucketName="${dist.bucket}" toDir="${dist.path}"
+										publicRead="true">
 										<fileset dir="${site.target.dir}/repository">
 											<include name="**/*" />
 											<include name="**" />
@@ -89,7 +93,8 @@
 										</fileset>
 									</upload>
 
-									<upload bucketName="${dist.bucket}" file="${dist.full.path}" toFile="${dist.path}/${dist.file.name}"
+									<upload bucketName="${dist.bucket}" file="${dist.full.path}"
+										toFile="${dist.path}/${dist.file.name}"
 										publicRead="true">
 										<metadata name="project.name" value="${dist.name}" />
 										<metadata name="release.type" value="${dist.type}" />
@@ -114,7 +119,7 @@
 					<dependency>
 						<groupId>net.java.dev.jets3t</groupId>
 						<artifactId>jets3t</artifactId>
-						<version>0.7.2</version>
+						<version>0.9.4</version>
 					</dependency>
 					<dependency>
 						<groupId>ant-contrib</groupId>

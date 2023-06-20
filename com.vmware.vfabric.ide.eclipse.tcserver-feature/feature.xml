@@ -2,46 +2,46 @@
 <feature
       id="com.vmware.vfabric.ide.eclipse.tcserver"
       label="%featureName"
-      version="4.1.2.qualifier"
+      version="5.0.0.qualifier"
       provider-name="%providerName">
 
-   <description>
-      %description
-   </description>
+      <description>
+            %description
+      </description>
 
-   <copyright>
-      %copyright
-   </copyright>
+      <copyright>
+            %copyright
+      </copyright>
 
-   <license url="%licenseUrl">
-      %license
-   </license>
+      <license url="%licenseUrl">
+            %license
+      </license>
 
-   <plugin
-         id="com.vmware.vfabric.ide.eclipse.tcserver.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+      <plugin
+            id="com.vmware.vfabric.ide.eclipse.tcserver.core"
+            download-size="0"
+            install-size="0"
+            version="0.0.0"
+            unpack="false" />
 
-   <plugin
-         id="com.vmware.vfabric.ide.eclipse.tcserver.reloading"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
+      <plugin
+            id="com.vmware.vfabric.ide.eclipse.tcserver.reloading"
+            download-size="0"
+            install-size="0"
+            version="0.0.0" />
 
-   <plugin
-         id="com.vmware.vfabric.ide.eclipse.tcserver.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+      <plugin
+            id="com.vmware.vfabric.ide.eclipse.tcserver.ui"
+            download-size="0"
+            install-size="0"
+            version="0.0.0"
+            unpack="false" />
 
-   <plugin
-         id="com.vmware.vfabric.ide.eclipse.tcserver.configurator"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+      <plugin
+            id="com.vmware.vfabric.ide.eclipse.tcserver.configurator"
+            download-size="0"
+            install-size="0"
+            version="0.0.0"
+            unpack="false" />
 
 </feature>

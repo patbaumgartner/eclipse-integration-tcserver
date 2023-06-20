@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SpringSource Tool Suite tc Server Integration (Core)
+Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.core;single
+ ton:=true
+Bundle-Version: 5.0.0.202306202019-SNAPSHOT
+Bundle-Vendor: Pivotal Software, Inc.
+Require-Bundle: org.eclipse.core.resources,org.eclipse.debug.core,org.ec
+ lipse.jdt.launching,org.eclipse.jst.server.core,org.eclipse.jst.server.
+ tomcat.core,org.eclipse.wst.server.core,org.eclipse.wst.sse.core,org.ec
+ lipse.wst.xml.core,org.apache.ant,org.eclipse.jdt.core,com.vmware.vfabr
+ ic.ide.eclipse.tcserver.reloading,com.vmware.vfabric.ide.eclipse.tcserv
+ er.configurator,org.eclipse.mylyn.commons.net;bundle-version="3.0.0",or
+ g.eclipse.core.commands,org.eclipse.ui.workbench,org.eclipse.jface
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.vmware.vfabric.ide.eclipse.tcserver.internal.core;x-
+ friends:="com.vmware.vfabric.ide.eclipse.tcserver.ui,com.vmware.vfabric
+ .ide.eclipse.tcserver.insight.ui,com.vmware.vfabric.ide.eclipse.tcserve
+ r.livegraph"
+Bundle-Activator: com.vmware.vfabric.ide.eclipse.tcserver.internal.core.
+ TcServerCorePlugin
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.core.runtime,org.eclipse.core.runtime.jobs,o
+ rg.eclipse.osgi.util,org.osgi.framework
+Bundle-License: Eclipse Public License v1.0;link="https://www.eclipse.or
+ g/legal/epl-v10.html"
+

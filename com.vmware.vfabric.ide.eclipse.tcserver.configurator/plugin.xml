@@ -1,61 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.2"?>
 <plugin>
-	<extension-point id="com.vmware.vfabric.ide.eclipse.tcserver.configurator.participant" name="Tc Server Workspace Configurator"
+	<extension-point id="com.vmware.vfabric.ide.eclipse.tcserver.configurator.participant"
+		name="Tc Server Workspace Configurator"
 		schema="schema/participant.exsd" />
-	<extension-point id="com.vmware.vfabric.ide.eclipse.tcserver.configurator.serverConfigurations" name="Tc Server Configurations"
+	<extension-point id="com.vmware.vfabric.ide.eclipse.tcserver.configurator.serverConfigurations"
+		name="Tc Server Configurations"
 		schema="schema/serverConfigurations.exsd" />
-	<extension-point id="com.vmware.vfabric.ide.eclipse.tcserver.configurator" name="Tc Server Configurator"
+	<extension-point id="com.vmware.vfabric.ide.eclipse.tcserver.configurator"
+		name="Tc Server Configurator"
 		schema="schema/configurator.exsd" />
-  <extension
-        point="org.eclipse.ui.startup">
-     <startup
-           class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.ConfiguratorImporter">
-     </startup>
-  </extension>
-	
-	
+	<extension
+		point="org.eclipse.ui.startup">
+		<startup
+			class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.ConfiguratorImporter">
+		</startup>
+	</extension>
+
 	<extension point="org.eclipse.ui.preferencePages">
 		<page category="org.eclipse.wst.server.ui.preferencePage"
 			class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.ui.ConfiguratorPreferencesPage"
-			id="com.springsource.sts.ide.ui.preferencePage.AutoConfiguration" name="Auto Configuration">
+			id="com.springsource.sts.ide.ui.preferencePage.AutoConfiguration"
+			name="Auto Configuration">
 		</page>
 	</extension>
-	
-	<extension
-          point="com.vmware.vfabric.ide.eclipse.tcserver.configurator.participant">
-       <participant
-             class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.server.ServerWorkspaceConfigurator"
-             id="com.vmware.vfabric.ide.eclipse.tcserver.configurator.ServerConfigurator">
-       </participant>
-    </extension>
 
-	
 	<extension
-        point="com.vmware.vfabric.ide.eclipse.tcserver.configurator">
-     	<configurator
-           class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.ConfiguratorImporter">
-     	</configurator>
- 	</extension>
- 	
- 	<extension
-       point="org.eclipse.core.runtime.preferences">
-    	<initializer
-          class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.PreferenceInitializer">
-    	</initializer>
- 	</extension>
- 	
- 	<extension
-        id="org.springsource.ide.eclipse.commons.configure"
-        point="org.eclipse.equinox.p2.engine.actions">
+		point="com.vmware.vfabric.ide.eclipse.tcserver.configurator.participant">
+		<participant
+			class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.server.ServerWorkspaceConfigurator"
+			id="com.vmware.vfabric.ide.eclipse.tcserver.configurator.ServerConfigurator">
+		</participant>
+	</extension>
+
+	<extension
+		point="com.vmware.vfabric.ide.eclipse.tcserver.configurator">
+		<configurator
+			class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.ConfiguratorImporter">
+		</configurator>
+	</extension>
+
+	<extension
+		point="org.eclipse.core.runtime.preferences">
+		<initializer
+			class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.PreferenceInitializer">
+		</initializer>
+	</extension>
+
+	<extension
+		id="org.springsource.ide.eclipse.commons.configure"
+		point="org.eclipse.equinox.p2.engine.actions">
 		<action
 			class="com.vmware.vfabric.ide.eclipse.tcserver.internal.configurator.touchpoint.ConfiguratorAction"
 			description="configure(target)"
-			name="com.springsource.sts.ide.configure" 
+			name="com.springsource.sts.ide.configure"
 			touchpointType="org.eclipse.equinox.p2.native"
 			touchpointVersion="1.0.0"
 			version="1.0.0">
 		</action>
 	</extension>
-  
+
 </plugin>

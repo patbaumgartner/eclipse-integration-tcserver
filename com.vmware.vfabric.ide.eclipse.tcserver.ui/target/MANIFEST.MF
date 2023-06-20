@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SpringSource Tool Suite tc Server Integration (UI)
+Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.ui;singleto
+ n:=true
+Bundle-Version: 5.0.0.202306202019-SNAPSHOT
+Bundle-Vendor: Pivotal Software, Inc.
+Require-Bundle: org.eclipse.debug.ui,org.eclipse.jdt.debug.ui,org.eclips
+ e.ui,org.eclipse.ui.forms,org.eclipse.ui.browser,org.eclipse.jst.server
+ .core,org.eclipse.jst.server.tomcat.core,org.eclipse.jst.server.tomcat.
+ ui,org.eclipse.wst.server.core,org.eclipse.wst.server.ui,com.vmware.vfa
+ bric.ide.eclipse.tcserver.core,org.eclipse.jdt.launching,com.vmware.vfa
+ bric.ide.eclipse.tcserver.configurator,org.apache.commons.lang
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: com.vmware.vfabric.ide.eclipse.tcserver.internal.ui.Tc
+ ServerUiPlugin
+Export-Package: com.vmware.vfabric.ide.eclipse.tcserver.internal.ui
+Import-Package: org.eclipse.core.runtime,org.eclipse.core.runtime.jobs,o
+ rg.eclipse.osgi.util,org.osgi.framework
+Bundle-License: Eclipse Public License v1.0;link="https://www.eclipse.or
+ g/legal/epl-v10.html"
+
