@@ -2,9 +2,9 @@
 
   The Pivotal/VMware tc Server Integration for Eclipse adds server adaptors for the Pivotal
   tc Server to the Eclipse JEE tooling. It makes it easy to deploy apps, start, debug
-  and stop your tc Server, create new instances with various configurations, all from within Eclipse.
+  and stop your tc Server, and create new instances with various configurations, all from within Eclipse.
 
-  It also comes with the Spring Dashboard is an optional component, which brings you
+  It also comes with the Spring Dashboard an optional component, which brings you
   up-to-date information about Spring-related projects as well as an easy-to-use extension
   install to get additional tooling add-ons, like the famous Spring IDE or the Cloud Foundry
   Integration for Eclipse.
@@ -19,14 +19,14 @@
 ## Installation (Milestone)
 
   You can install the latest milestone build of the vFabric tc Server Integration for Eclipse
-  manually from this udpate site:
+  manually from this update site:
 
   https://dist.springsource.com/milestone/TOOLS/eclipse-integration-tcserver/
 
 ## Installation (CI builds)
 
-  If you want to live on the leading egde, you can also install always up-to-date continuous
-  integration buids from this update site:
+  If you want to live on the leading edge, you can also install always up-to-date continuous
+  integration builds from this update site:
 
   https://dist.springsource.com/snapshot/TOOLS/eclipse-integration-tcserver/nightly
 
@@ -35,7 +35,7 @@
 
 ## Questions and bug reports:
 
-  If you have a question that Google can't answer, the best way is to go to the stackoverflow
+  If you have a question that Google can't answer, the best way is to go to the StackOverflow
   using the tag `spring-tool-suite`:
 
   https://stackoverflow.com/tags/spring-tool-suite[`spring-tool-suite`]
@@ -55,4 +55,4 @@
   The Pivotal/VMware tc Server Integration for Eclipse project uses Maven Tycho to do continuous integration
   builds and to produce p2 repos and update sites. To build the project yourself, you can execute:
 
-  `mvn -Pe427 -Dmaven.test.skip=true clean install`
+  `mvn -Pe428 -Dmaven.test.skip=true clean install`

@@ -101,8 +101,8 @@ STS PARENT POM
 
 		<maven.test.error.ignore>false</maven.test.error.ignore>
 		<maven.test.failure.ignore>false</maven.test.failure.ignore>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<encoding>UTF-8</encoding>
 
 		<com.springsource.sts.tests.cache>${user.home}/.sts-test-cache</com.springsource.sts.tests.cache>
@@ -139,7 +139,7 @@ STS PARENT POM
 				<repository>
 					<id>eclipse-integration-commons</id>
 					<layout>p2</layout>
-					<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
+				<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
 				</repository> 
 				-->
 			</repositories>
@@ -174,7 +174,7 @@ STS PARENT POM
 				<repository>
 					<id>eclipse-integration-commons</id>
 					<layout>p2</layout>
-					<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
+				<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
 				</repository> 
 				-->
 			</repositories>
@@ -209,7 +209,7 @@ STS PARENT POM
 				<repository>
 					<id>eclipse-integration-commons</id>
 					<layout>p2</layout>
-					<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
+				<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
 				</repository> 
 				-->
 			</repositories>
@@ -244,7 +244,7 @@ STS PARENT POM
 				<repository>
 					<id>eclipse-integration-commons</id>
 					<layout>p2</layout>
-					<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
+				<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
 				</repository> 
 				-->
 			</repositories>
@@ -281,7 +281,7 @@ STS PARENT POM
 				<repository>
 					<id>eclipse-integration-commons</id>
 					<layout>p2</layout>
-					<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
+				<url>https://dist.springsource.com/${dist.type}/TOOLS/eclipse-integration-commons/${dist.pathpostfix}</url>
 				</repository>
 				-->
 			</repositories>
@@ -316,6 +316,34 @@ STS PARENT POM
 		</profile>
 
 		<profile>
+			<id>e428</id>
+			<properties>
+				<dist.target>e4.28</dist.target>
+				<dist.platform.name>2023-06</dist.platform.name>
+				<dist.platform.id>2023-06</dist.platform.id>
+				<dist.platform.version>4.28</dist.platform.version>
+				<package.qualifierPrefix>e428</package.qualifierPrefix>
+			</properties>
+			<repositories>
+				<repository>
+					<id>2023-06</id>
+					<layout>p2</layout>
+					<url>https://download.eclipse.org/releases/2023-06/</url>
+				</repository>
+				<repository>
+					<id>swtbot</id>
+					<layout>p2</layout>
+					<url>https://download.eclipse.org/technology/swtbot/releases/latest/</url>
+				</repository>
+				<repository>
+					<id>mylyn</id>
+					<layout>p2</layout>
+					<url>https://download.eclipse.org/mylyn/releases/latest </url>
+				</repository>
+			</repositories>
+		</profile>
+
+		<profile>
 			<id>build.springsource.com</id>
 			<activation>
 				<property>
@@ -323,7 +351,8 @@ STS PARENT POM
 				</property>
 			</activation>
 			<properties>
-				<test.vmargs>-Dhttp.proxyHost=proxy.eng.vmware.com -Dhttp.proxyPort=3128 -Dhttps.proxyHost=proxy.eng.vmware.com -Dhttps.proxyPort=3128 ${test.osvmargs}</test.vmargs>
+				<test.vmargs>-Dhttp.proxyHost=proxy.eng.vmware.com -Dhttp.proxyPort=3128
+					-Dhttps.proxyHost=proxy.eng.vmware.com -Dhttps.proxyPort=3128 ${test.osvmargs}</test.vmargs>
 				<p2.qualifier>CI-B${bamboo.buildNumber}</p2.qualifier>
 				<p2.replaceQualifier>true</p2.replaceQualifier>
 			</properties>
@@ -703,9 +732,12 @@ STS PARENT POM
 						<showEclipseLog>true</showEclipseLog>
 						<testSuite>${project.artifactId}</testSuite>
 						<testClass>${test.class}</testClass>
-						<argLine>-Xmx1024m -Djava.io.tmpdir=${project.build.directory} -Dcom.springsource.sts.tests.cache=${com.springsource.sts.tests.cache} -Duser.home=${project.build.directory} ${test.vmargs}</argLine>
+						<argLine>-Xmx1024m -Djava.io.tmpdir=${project.build.directory}
+							-Dcom.springsource.sts.tests.cache=${com.springsource.sts.tests.cache}
+							-Duser.home=${project.build.directory} ${test.vmargs}</argLine>
 						<appArgLine>
-							-eclipse.keyring ${project.build.directory}/keystore -eclipse.password ${project.build.directory}/keystore.password
+							-eclipse.keyring ${project.build.directory}/keystore -eclipse.password
+							${project.build.directory}/keystore.password
 						</appArgLine>
 
 						<bundleStartLevel>

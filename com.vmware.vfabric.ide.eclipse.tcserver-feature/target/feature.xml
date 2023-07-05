@@ -2,7 +2,7 @@
 <feature
       id="com.vmware.vfabric.ide.eclipse.tcserver"
       label="%featureName"
-      version="5.0.0.202306202019-SNAPSHOT"
+      version="5.0.0.202307050955-SNAPSHOT"
       provider-name="%providerName">
 
       <description>
@@ -20,28 +20,28 @@
       <plugin
             id="com.vmware.vfabric.ide.eclipse.tcserver.core"
             download-size="101"
-            install-size="232"
-            version="5.0.0.202306202019-SNAPSHOT"
+            install-size="233"
+            version="5.0.0.202307050955-SNAPSHOT"
             unpack="false" />
 
       <plugin
             id="com.vmware.vfabric.ide.eclipse.tcserver.reloading"
             download-size="420"
             install-size="449"
-            version="5.0.0.202306202019-SNAPSHOT" />
+            version="5.0.0.202307050955-SNAPSHOT" />
 
       <plugin
             id="com.vmware.vfabric.ide.eclipse.tcserver.ui"
             download-size="154"
-            install-size="306"
-            version="5.0.0.202306202019-SNAPSHOT"
+            install-size="294"
+            version="5.0.0.202307050955-SNAPSHOT"
             unpack="false" />
 
       <plugin
             id="com.vmware.vfabric.ide.eclipse.tcserver.configurator"
-            download-size="133"
-            install-size="253"
-            version="5.0.0.202306202019-SNAPSHOT"
+            download-size="134"
+            install-size="252"
+            version="5.0.0.202307050955-SNAPSHOT"
             unpack="false" />
 
 </feature>

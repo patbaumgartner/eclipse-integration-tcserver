@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: SpringSource Tool Suite tc Server Integration (UI)
 Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.ui;singleto
  n:=true
-Bundle-Version: 5.0.0.202306202019-SNAPSHOT
+Bundle-Version: 5.0.0.202307050955-SNAPSHOT
 Bundle-Vendor: Pivotal Software, Inc.
 Require-Bundle: org.eclipse.debug.ui,org.eclipse.jdt.debug.ui,org.eclips
  e.ui,org.eclipse.ui.forms,org.eclipse.ui.browser,org.eclipse.jst.server

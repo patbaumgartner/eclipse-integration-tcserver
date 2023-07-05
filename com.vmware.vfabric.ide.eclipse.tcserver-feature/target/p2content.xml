@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='2'>
-  <unit id='com.vmware.vfabric.ide.eclipse.tcserver.feature.jar' version='5.0.0.202306202019-SNAPSHOT'>
+  <unit id='com.vmware.vfabric.ide.eclipse.tcserver.feature.jar' version='5.0.0.202307050955-SNAPSHOT'>
     <properties size='12'>
       <property name='org.eclipse.equinox.p2.name' value='%featureName'/>
       <property name='org.eclipse.equinox.p2.description' value='%description'/>
@@ -16,15 +16,15 @@
       <property name='maven-type' value='eclipse-feature'/>
     </properties>
     <provides size='3'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.feature.jar' version='5.0.0.202306202019-SNAPSHOT'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.feature.jar' version='5.0.0.202307050955-SNAPSHOT'/>
       <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-      <provided namespace='org.eclipse.update.feature' name='com.vmware.vfabric.ide.eclipse.tcserver' version='5.0.0.202306202019-SNAPSHOT'/>
+      <provided namespace='org.eclipse.update.feature' name='com.vmware.vfabric.ide.eclipse.tcserver' version='5.0.0.202307050955-SNAPSHOT'/>
     </provides>
     <filter>
       (org.eclipse.update.install.features=true)
     </filter>
     <artifacts size='1'>
-      <artifact classifier='org.eclipse.update.feature' id='com.vmware.vfabric.ide.eclipse.tcserver' version='5.0.0.202306202019-SNAPSHOT'/>
+      <artifact classifier='org.eclipse.update.feature' id='com.vmware.vfabric.ide.eclipse.tcserver' version='5.0.0.202307050955-SNAPSHOT'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
@@ -43,8 +43,8 @@
       %copyright
     </copyright>
   </unit>
-  <unit id='com.vmware.vfabric.ide.eclipse.tcserver.feature.group' version='5.0.0.202306202019-SNAPSHOT' singleton='false'>
-    <update id='com.vmware.vfabric.ide.eclipse.tcserver.feature.group' range='[0.0.0,5.0.0.202306202019-SNAPSHOT)' severity='0'/>
+  <unit id='com.vmware.vfabric.ide.eclipse.tcserver.feature.group' version='5.0.0.202307050955-SNAPSHOT' singleton='false'>
+    <update id='com.vmware.vfabric.ide.eclipse.tcserver.feature.group' range='[0.0.0,5.0.0.202307050955-SNAPSHOT)' severity='0'/>
     <properties size='13'>
       <property name='org.eclipse.equinox.p2.name' value='%featureName'/>
       <property name='org.eclipse.equinox.p2.description' value='%description'/>
@@ -61,15 +61,15 @@
       <property name='df_LT.providerName' value='VMware, Inc.'/>
     </properties>
     <provides size='2'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.feature.group' version='5.0.0.202306202019-SNAPSHOT'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.feature.group' version='5.0.0.202307050955-SNAPSHOT'/>
       <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
     </provides>
     <requires size='5'>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.core' range='[5.0.0.202306202019-SNAPSHOT,5.0.0.202306202019-SNAPSHOT]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.reloading' range='[5.0.0.202306202019-SNAPSHOT,5.0.0.202306202019-SNAPSHOT]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.ui' range='[5.0.0.202306202019-SNAPSHOT,5.0.0.202306202019-SNAPSHOT]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.configurator' range='[5.0.0.202306202019-SNAPSHOT,5.0.0.202306202019-SNAPSHOT]'/>
-      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.feature.jar' range='[5.0.0.202306202019-SNAPSHOT,5.0.0.202306202019-SNAPSHOT]'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.core' range='[5.0.0.202307050955-SNAPSHOT,5.0.0.202307050955-SNAPSHOT]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.reloading' range='[5.0.0.202307050955-SNAPSHOT,5.0.0.202307050955-SNAPSHOT]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.ui' range='[5.0.0.202307050955-SNAPSHOT,5.0.0.202307050955-SNAPSHOT]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.configurator' range='[5.0.0.202307050955-SNAPSHOT,5.0.0.202307050955-SNAPSHOT]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='com.vmware.vfabric.ide.eclipse.tcserver.feature.jar' range='[5.0.0.202307050955-SNAPSHOT,5.0.0.202307050955-SNAPSHOT]'>
         <filter>
           (org.eclipse.update.install.features=true)
         </filter>

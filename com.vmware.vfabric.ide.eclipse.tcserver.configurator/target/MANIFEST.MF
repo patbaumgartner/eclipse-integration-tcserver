@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: SpringSource Tool Suite Workspace Configuration
 Bundle-SymbolicName: com.vmware.vfabric.ide.eclipse.tcserver.configurato
  r;singleton:=true
-Bundle-Version: 5.0.0.202306202019-SNAPSHOT
+Bundle-Version: 5.0.0.202307050955-SNAPSHOT
 Bundle-Activator: com.vmware.vfabric.ide.eclipse.tcserver.internal.confi
  gurator.Activator
 Bundle-Vendor: Pivotal Software, Inc.
